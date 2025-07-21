@@ -15,8 +15,10 @@ def multiply(a, b):
 def divide(a, b):
     """
     Divides two numbers.
-    ISSUE 1: Does not handle division by zero.
+    Raises ValueError if the divisor is zero.
     """
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b
 
 def factorial(n):
